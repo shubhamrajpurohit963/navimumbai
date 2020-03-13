@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Document</title>
+<style type="text/css">
+   
+   body{
+    
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+
+   }
+   header{
+background-color: 	#0086ad;
+color: white;
+padding-top: 25px;
+padding-bottom: 10px;
+min-height: 92px;
+border-bottom: #ffffff 3px solid;
+font-weight: bold;
+}
+
+header a{
+    color:white;
+    text-decoration: none;
+    font-weight: 800;
+    display: inline;
+}
+
+header ul{
+    padding: 0;
+    margin: 0;  
+    padding-right: 0;
+    padding-top: 40px;   
+    
+    }
+
+header li {
+    float:left;
+    display: inline;    
+    padding: 0 20px 0 20px;
+    font-size: 100%;      
+}
+
+header .branding{
+    float:left;
+    width: 25%;
+}
+
+header .branding img{
+    margin: 0;
+    height: 90px;
+    float: left;    
+    width: 90%;
+}
+
+header nav{
+    float: right;
+    margin-top: 0;
+}
+
+header .current a{
+    font-weight: 800;
+    color: orangered;
+}
+
+header a:hover{
+    color:#cccccc;
+    font-weight: bold;
+    font-weight: 1000;
+    }
+   
+   .img1,.img3{
+      float: right;      
+      height: 100%;
+      width:38%;
+      margin: 4px;
+    }
+    .img2,.img4{
+      float: left;      
+      height: 100%;
+      width:38%;
+      margin: 4px;
+    }
+
+    .main-container{
+     display: flex;     
+     justify-content: center;
+     align-items: center; 
+     max-width:2000px;
+         
+    }
+    
+    .flip-card h1{
+      text-align: center;
+      border: black 1px solid;
+      border-radius: 10px;  
+      background-color: white ;
+    }
+
+    .flip-card{
+      border: black 2px solid;
+      padding:10px;
+      margin: 10px;
+      background-color:#f1f1f1;
+      width: 60%;
+      height: 100%;
+      border-radius: 10px; 
+    }
+    footer{    
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    background-color: #0086ad;    
+    width: 100%;        
+    
+    }
+
+
+    @media(max-width:700px){
+      .flip-card >img{
+      float: none;
+      width: 80%;
+      height:80%;
+      margin-left: 9%;
+      
+    }
+    
+
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="branding" >
+            <img src="img/brand.png">
+
+            </div>
+        
+        <nav class="navbar">
+            <ul>
+                <li class="current"><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="registration.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </div> 
+    </header>
+    
+  <div class="main-container">    
+    <div class="flip-card" data-aos="fade-right" data-aos-delay="500">
+                  <h1>Nerul Balaji Temple</h1>          
+                  <img src="img/nerul/balaji.jpg" class="img1"> 
+                  <p>The Nerul Balaji Temple is an almost-exact replica of the Tirupati Balaji Temple, and also replicates certain aspects of the Venkateswara temple at Tirupati. It has been constructed according to the Shilpa Shastra. This temple is located on a small hill close to the western side of the Nerul railway station.</p>
+                  </div>
+  </div>
+  <div class="main-container">    
+    <div class="flip-card" data-aos="fade-left" data-aos-delay="500">
+                  <h1>D Y Patil Sports Stadium</h1>          
+                  <img src="img/nerul/dypatil.jpg" class="img2"> 
+                  <p>The DY Patil Sports Stadium is a football and a cricket stadium at D. Y. Patil campus at Nerul in Navi Mumbai, Maharashtra, India. It was designed by Hafeez Contractor. The stadium was officially inaugurated on 4 March 2008, and was briefly the home ground for IPL team Mumbai Indians. </p>
+                  </div>
+  </div> <div class="main-container">    
+    <div class="flip-card" data-aos="fade-right" data-aos-delay="500">
+                  <h1>Jewel Of Navi Mumbai</h1>          
+                  <img src="img/nerul/jewel.jpg" class="img3"> 
+                <p>Jewel of Navi Mumbai by cycle is a 5 mile (11,000-step) route located near Seawoods, Navi Mumbai, India. This route has an elevation gain of about 23 ft and is rated as easy. Find the best walking trails near you in Pacer App.</p>
+                  </div>
+  </div>
+</div> <div class="main-container"> 
+  <div class="flip-card" data-aos="fade-left" data-aos-delay="500">
+                  <h1>Hanuman Temple of SIES</h1>          
+                  <img src="img/nerul/sies.jpg" class="img4"> 
+                <p>This temple situated in Nerul, New Mumbai / Navi Mumbai area has huge & tall idol of Lord Hanuman-ji. The idol is very inspiring & the atmosphere is calm & peaceful here. The height of the idol is approx 35 feet high. There are more smaller temple shrines inside this complex. A must visit temple if you in & around Navi Mumbai area. Highly recommend !!</p>
+                  </div>
+  </div>
+   
+</div>
+
+  <footer>
+        <p>No copyrights reserved &copy; </p>
+       <p>Developed by:- Shubham Rajpurohit</p>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

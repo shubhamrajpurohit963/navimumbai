@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration Form</title>
+
+    <style>
+    
+    input[type=text],select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+span {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+width: 60%;
+display: flex;
+align-items:center;
+justify-content: center;
+margin-left: 20%; 
+}
+
+h1{
+    text-align:center;
+}
+
+.value_error{
+    color: red;
+    font-size: 14px
+}
+header{
+background-color: 	#0086ad;
+color: white;
+padding-top: 25px;
+padding-bottom: 10px;
+min-height: 92px;
+border-bottom: #ffffff 3px solid;
+
+font-weight: bold;
+margin-top:0;
+}
+
+header a{
+    color:white;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline;
+}
+
+header ul{
+    padding: 0;
+    margin: 0;  
+    padding-right: 0;
+    padding-top: 40px;   
+    }
+
+header li {
+    float:left;
+    display: inline;    
+    padding: 0 20px 0 20px;
+    
+}
+
+header .branding{
+    float:left;
+}
+
+header .branding img{
+    margin: 0;
+    height: 90px;
+    float: left;    
+}
+
+header nav{
+    float: right;
+    margin-top: 0;
+}
+
+header .current a{
+    font-weight: bold;
+    color: #e8491d;
+}
+
+header a:hover{
+    color:#cccccc;
+    font-weight: bold;
+}
+
+body{
+    margin:0;
+    padding: 0;
+}
+    </style>
+</head>
+
+<body>
+        <header>
+                <div class="container">
+                    <div class="branding" >
+                    <img src="img/brand.png">
+        
+                    </div>
+                
+                <nav class="navbar">
+                    <ul>
+                        <li class="current"><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="registration.html">CONTACT US</a></li>
+                    </ul>
+                </nav>
+            </div> 
+            </header>
+        <span>
+                  <form action="/action_page.php" onsubmit="return Validate()" name="vform" method="POST">                 
+                    <h1> Registration Form </h1><hr><br>
+
+                  <label for="fname">First Name*</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  <span id="name_error" class="value_error"></span>
+              
+                  <label for="lname">Last Name*</label>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                  <span id="lname_error" class="value_error"></span>
+
+                  <label for="Email">Email*</label>
+                  <input type="text" id="Email" name="Email" placeholder="Your Email Id..">
+                  <span id="email_error" class="value_error"></span>
+                  
+                  <label for="Password">Password*</label>
+                  <input type="text" id="Password" name="Password" placeholder="Your Password ..">
+                  <span id="password_error" class="value_error"></span>
+
+
+                  <label for="contact">Contact Number</label>
+                  <input type="text" id="contact1" name="contact" placeholder="Your Contact Number..">
+                  <span id="contact_error" class="value_error"></span>
+
+                  <label for="country">Country</label>
+                  <select id="country" name="country">
+                    <option value="INDIA" default>INDIA</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    
+                  </select>
+                
+                  <input type="submit" value="Submit">
+                </form>
+        </span>
+</body>
+<script type="text/javascript">
+
+function Validate(){
+    var firstname = document.getElementById('fname').value;
+    var lastname = document.getElementById('lname').value;
+    var email = document.getElementById('Email').value;
+    var password = document.getElementById('Password').value;
+    
+    var contact = document.getElementById('contact1').value;
+
+    var usernameCheck = /^[a-zA-Z\D]{3,16}/ ;
+    var PasswordCheck = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/ ;
+    var emailcheck = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
+    var contactcheck = /(\d{10})$/igm;
+
+   if(usernameCheck.test(firstname)){
+       document.getElementById('name_error').innerHTML='';
+     
+   }
+   else {
+       document.getElementById('name_error').innerHTML='Invalid Username';
+       return false;
+   } 
+
+   if(usernameCheck.test(lastname)){
+       document.getElementById('lname_error').innerHTML='';
+     
+   }
+   else {
+       document.getElementById('lname_error').innerHTML='Invalid Username';
+       return false;
+   } 
+
+   if(emailcheck.test(email)){
+       document.getElementById('email_error').innerHTML='';
+     
+   }
+   else {
+       document.getElementById('email_error').innerHTML='Invalid Email';
+       return false;
+   } 
+
+   if(PasswordCheck.test(password)){
+       document.getElementById('password_error').innerHTML='';
+     
+   }
+   else {
+       document.getElementById('password_error').innerHTML='Invalid Password';
+       return false;
+   } 
+
+   
+   
+
+    if(contactcheck.test(contact)){
+       document.getElementById('contact_error').innerHTML='';
+     
+   }
+   else {
+       document.getElementById('contact_error').innerHTML='Contact Not valid';
+       return false;
+   } 
+}
+
+
+</script>
+</html>
+
